@@ -35,10 +35,8 @@ app.post('/imageurl', (req, res) => {
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : 'postgres',
-      database : 'db_smart_brain'
+      connectString : process.env.DATABASE_URL,
+      ssl : true
     }
   });
 
