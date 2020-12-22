@@ -35,7 +35,7 @@ app.post('/imageurl', (req, res) => {
 const db = knex({
     client: 'pg',
     connection: {
-      connectString : process.env.DATABASE_URL,
+      connectionString : process.env.DATABASE_URL,
       ssl : true
     }
   });
